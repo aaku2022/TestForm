@@ -24,7 +24,17 @@ interface Report {
 export class AppComponent {
   title = 'FormTest1';
   Users: Report[] = UsersJson;
+  Keys = [""];
+  Values = [""];
+  
   constructor(){
     console.log(this.Users);
+    for (let key of this.Users) {
+      for(var i in key){
+           console.log('key: ' +  i + 'value' );
+           this.Keys.push(i);
+      }
+     }
+     console.log(this.Keys);
   }
 }
