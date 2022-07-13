@@ -1,9 +1,14 @@
 {
   "ReportName": "reportname",
   "Accountingperiod": "november",
+  "Category": {
+    "Row": "row1",
+    "Section": "sec",
+    "Dashboard": "dashboard",
+    "Report": "report"
+  },
   "SectionIdentifier": "identifier",
   "UserID": "test123",
   "Timestamp": "10/02/2022",
-  "Comment": "pls change the data",
-  "test": "wwww"
+  "Comment": "pls change the data"
 }
