@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { __values } from 'tslib';
 import UsersJson from './users.json';
   
 interface Report {
@@ -31,26 +32,17 @@ export class AppComponent {
   Users: Report[] = UsersJson;
   Keys = [""];
   Values = [""];
-  ObjItems: Obj[] = [];
   constructor(){
     console.log(this.Users);
     for (let key of this.Users) {
       console.log("value?"+key);
       for(var i in key){
            this.Keys.push(i);
-           console.log('key: ' +  i );
+           console.log('key: ' +  i + 'value: ' + key);
       }
      }
     this.Keys.shift();
     console.log(this.Keys);
-  //   var arr = this.Users.map(user => ({
-  //     data: user,
-  //     label: label
-  // }));
-  //   this.Users.map((key,value)) =>
-  //   {
-
-  //   }
   }
 
 }
