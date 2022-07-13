@@ -3,70 +3,70 @@
   <h2>Display Data from Json</h2>
 
   <div class="form-group">
-    <ng-container *ngFor="let user of Users">
+    <ng-container *ngFor="let user of Users | keyvalue">
       <table>
         <th></th>
         <th></th>
         <tbody>
-          <tr>
-            <td>
-              {{Keys[0]}} :
-            </td>
-            <td>
-              <input type="text" class="form-control" placeholder="Report Name" required=""
-                [value]="user.ReportName" /><br>
-            </td>
-          <tr>
-            <td>
-              {{Keys[1]}} :
-            </td>
-            <td>
-              <input type="text" class="form-control" placeholder="Accounting Period" required=""
-                [value]="user.Accountingperiod" /><br>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {{Keys[2]}}
-            </td>
-            <td>
+        <tr>
+          <td>
+            {{user.key}} :
+          </td>
+          <td>
+            <input type="text" class="form-control" placeholder={{user.key}} required=""
+                   [value]="user.value" /><br>
+          </td>
+          <!--          <tr>-->
+          <!--            <td>-->
+          <!--              {{Keys[1]}} :-->
+          <!--            </td>-->
+          <!--            <td>-->
+          <!--              <input type="text" class="form-control" placeholder="Accounting Period" required=""-->
+          <!--                [value]="user.Accountingperiod" /><br>-->
+          <!--            </td>-->
+          <!--          </tr>-->
+          <!--          <tr>-->
+          <!--            <td>-->
+          <!--              {{Keys[2]}}-->
+          <!--            </td>-->
+          <!--            <td>-->
 
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {{Keys[3]}} :
-            </td>
-            <td>
-              <input type="text" class="form-control" placeholder="SectionIdentifier" required=""
-                [value]="user.SectionIdentifier" /><br>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {{Keys[4]}} :
-            </td>
-            <td>
-              <input type="text" class="form-control" placeholder="UserID" required="" [value]="user.UserID" /><br>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {{Keys[5]}} :
-            </td>
-            <td>
-              <input type="text" class="form-control" placeholder="Timestamp" required=""
-                [value]="user.Timestamp" /><br>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {{Keys[6]}} :
-            </td>
-            <td>
-              <input type="text" class="form-control" placeholder="Comment" required="" [value]="user.Comment" /><br>
-            </td>
-          </tr>
+          <!--            </td>-->
+          <!--          </tr>-->
+          <!--          <tr>-->
+          <!--            <td>-->
+          <!--              {{Keys[3]}} :-->
+          <!--            </td>-->
+          <!--            <td>-->
+          <!--              <input type="text" class="form-control" placeholder="SectionIdentifier" required=""-->
+          <!--                [value]="user.SectionIdentifier" /><br>-->
+          <!--            </td>-->
+          <!--          </tr>-->
+          <!--          <tr>-->
+          <!--            <td>-->
+          <!--              {{Keys[4]}} :-->
+          <!--            </td>-->
+          <!--            <td>-->
+          <!--              <input type="text" class="form-control" placeholder="UserID" required="" [value]="user.UserID" /><br>-->
+          <!--            </td>-->
+          <!--          </tr>-->
+          <!--          <tr>-->
+          <!--            <td>-->
+          <!--              {{Keys[5]}} :-->
+          <!--            </td>-->
+          <!--            <td>-->
+          <!--              <input type="text" class="form-control" placeholder="Timestamp" required=""-->
+          <!--                [value]="user.Timestamp" /><br>-->
+          <!--            </td>-->
+          <!--          </tr>-->
+          <!--          <tr>-->
+          <!--            <td>-->
+          <!--              {{Keys[6]}} :-->
+          <!--            </td>-->
+          <!--            <td>-->
+          <!--              <input type="text" class="form-control" placeholder="Comment" required="" [value]="user.Comment" /><br>-->
+          <!--            </td>-->
+          <!--          </tr>-->
         </tbody>
       </table>
       <!-- Row : <input type="text" class="form-control" placeholder="Row" required="" [value]="user.Category.Row" /><br>
