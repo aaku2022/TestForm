@@ -16,6 +16,11 @@ interface Report {
     Comment: String;
 }
 
+interface Obj {
+  Key: String;
+  Value: String;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -26,15 +31,26 @@ export class AppComponent {
   Users: Report[] = UsersJson;
   Keys = [""];
   Values = [""];
-  
+  ObjItems: Obj[] = [];
   constructor(){
     console.log(this.Users);
     for (let key of this.Users) {
+      console.log("value?"+key);
       for(var i in key){
-           console.log('key: ' +  i + 'value' );
            this.Keys.push(i);
+           console.log('key: ' +  i );
       }
      }
-     console.log(this.Keys);
+    this.Keys.shift();
+    console.log(this.Keys);
+  //   var arr = this.Users.map(user => ({
+  //     data: user,
+  //     label: label
+  // }));
+  //   this.Users.map((key,value)) =>
+  //   {
+
+  //   }
   }
+
 }

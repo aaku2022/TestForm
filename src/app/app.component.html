@@ -1,31 +1,131 @@
 <div class="container mt-5">
-  
+
   <h2>Display Data from Json</h2>
-  
-      <!-- <ul *ngFor="let user of Users">
-        <li>Report Name: <span>{{ user.ReportName }}</span></li>
-        <li>Accounting Period: <span>{{ user.Accountingperiod }}</span></li>
-        <li>Row: <span>{{ user.Category.Row }}</span></li>
-        <li>Section: <span>{{ user.Category.Section }}</span></li>
-        <li>Dashboard: <span>{{ user.Category.Dashboard }}</span></li>
-        <li>Report: <span>{{ user.Category.Report }}</span></li>
-        <li>SectionIdentifier: <span>{{ user.SectionIdentifier }}</span></li>
-        <li>UserID: <span>{{ user.UserID }}</span></li>
-        <li>Timestamp: <span>{{ user.Timestamp }}</span></li>
-        <li>Comment: <span>{{ user.Comment }}</span></li>
-      </ul> -->
+
   <div class="form-group">
-      <ng-container *ngFor="let user of Users">
-        report Name : <input type="text" class="form-control" placeholder="Report Name" required="" [value]="user.ReportName" /><br>
-        Accounting Period : <input type="text" class="form-control" placeholder="Accounting Period" required="" [value]="user.Accountingperiod" /><br>
-        Row : <input type="text" class="form-control" placeholder="Row" required="" [value]="user.Category.Row" /><br>
-        Section : <input type="text" class="form-control" placeholder="Section" required="" [value]="user.Category.Section" /><br>
-        Dashboard : <input type="text" class="form-control" placeholder="Dashboard" required="" [value]="user.Category.Dashboard" /><br>
-        Report : <input type="text" class="form-control" placeholder="Report" required="" [value]="user.Category.Report" /><br>
-        Section Identifier : <input type="text" class="form-control" placeholder="SectionIdentifier" required="" [value]="user.SectionIdentifier" /><br>
-        User ID : <input type="text" class="form-control" placeholder="UserID" required="" [value]="user.UserID" /><br>
-        Timestamp : <input type="text" class="form-control" placeholder="Timestamp" required="" [value]="user.Timestamp" /><br>
-        Comment : <input type="text" class="form-control" placeholder="Comment" required="" [value]="user.Comment" /><br>
+    <ng-container *ngFor="let user of Users">
+      <table>
+        <th></th>
+        <th></th>
+        <tbody>
+          <tr>
+            <td>
+              {{Keys[0]}} :
+            </td>
+            <td>
+              <input type="text" class="form-control" placeholder="Report Name" required=""
+                [value]="user.ReportName" /><br>
+            </td>
+          <tr>
+            <td>
+              {{Keys[1]}} :
+            </td>
+            <td>
+              <input type="text" class="form-control" placeholder="Accounting Period" required=""
+                [value]="user.Accountingperiod" /><br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{Keys[2]}}
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{Keys[3]}} :
+            </td>
+            <td>
+              <input type="text" class="form-control" placeholder="SectionIdentifier" required=""
+                [value]="user.SectionIdentifier" /><br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{Keys[4]}} :
+            </td>
+            <td>
+              <input type="text" class="form-control" placeholder="UserID" required="" [value]="user.UserID" /><br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{Keys[5]}} :
+            </td>
+            <td>
+              <input type="text" class="form-control" placeholder="Timestamp" required=""
+                [value]="user.Timestamp" /><br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{Keys[6]}} :
+            </td>
+            <td>
+              <input type="text" class="form-control" placeholder="Comment" required="" [value]="user.Comment" /><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Row : <input type="text" class="form-control" placeholder="Row" required="" [value]="user.Category.Row" /><br>
+      Section : <input type="text" class="form-control" placeholder="Section" required=""
+        [value]="user.Category.Section" /><br>
+      Dashboard : <input type="text" class="form-control" placeholder="Dashboard" required=""
+        [value]="user.Category.Dashboard" /><br>
+      Report : <input type="text" class="form-control" placeholder="Report" required=""
+        [value]="user.Category.Report" /><br> -->
     </ng-container>
+    <!-- <div *ngFor="let user of Users">
+      <div *ngFor="let key of Keys; let i = index">
+        {{key}} : <input type="text" class="form-control" placeholder="Report Name" required=""
+          [value]="user.ReportName" /><br>
+      </div>
+    </div> -->
   </div>
+  <!-- <div class="form-container" *ngFor="let user of Users">
+    <mat-form-field>
+      <mat-label>{{Keys[0]}}</mat-label>
+      <input matInput placeholder="Input" [value]="user.ReportName">
+    </mat-form-field><br>
+    <mat-form-field>
+      <mat-label>{{Keys[1]}}</mat-label>
+      <input matInput placeholder="Input" [value]="user.Accountingperiod">
+    </mat-form-field><br>
+    <h3>{{Keys[2]}} : </h3>
+    <mat-form-field>
+      <mat-label>Row</mat-label>
+      <input matInput placeholder="Input" [value]="user.Category.Row">
+    </mat-form-field><br>
+    <mat-form-field>
+      <mat-label>Section</mat-label>
+      <input matInput placeholder="Input" [value]="user.Category.Section">
+    </mat-form-field><br>
+    <mat-form-field>
+      <mat-label>Dashboard</mat-label>
+      <input matInput placeholder="Input" [value]="user.Category.Dashboard">
+    </mat-form-field><br>
+    <mat-form-field>
+      <mat-label>Report</mat-label>
+      <input matInput placeholder="Input" [value]="user.Category.Report">
+    </mat-form-field><br>
+    <mat-form-field>
+      <mat-label>{{Keys[3]}}</mat-label>
+      <input matInput placeholder="Input" [value]="user.SectionIdentifier">
+    </mat-form-field><br>
+    <mat-form-field>
+      <mat-label>{{Keys[4]}}</mat-label>
+      <input matInput placeholder="Input" [value]="user.UserID">
+    </mat-form-field><br>
+    <mat-form-field>
+      <mat-label>{{Keys[5]}}</mat-label>
+      <input matInput placeholder="Input" [value]="user.Timestamp">
+    </mat-form-field><br>
+    <mat-form-field>
+      <mat-label>{{Keys[6]}}</mat-label>
+      <input matInput placeholder="Input" [value]="user.Comment">
+    </mat-form-field><br>
+
+  </div> -->
 </div>
